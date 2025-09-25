@@ -137,10 +137,11 @@
     padding: 2rem;
     border-radius: 8px;
     width: 60%;
-    max-width: 800px;
+    max-width: 600px;
     text-align: center;
     position: relative;
-  }8
+  }
+  
   .modal-contenido img {
     width: 100%;
     height: 200px;
