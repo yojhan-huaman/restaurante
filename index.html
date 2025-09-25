@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Delicioso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍴 Restaurante Delicioso</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    
+    <div class="carrito-icono">
+      🛒 <span id="contador-carrito">0</span>
+    </div>  
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenidos</h2>
+      <p>
+        En <strong>Restaurante Delicioso</strong> ofrecemos una experiencia gastronómica única.  
+        Nuestros chefs preparan platos con ingredientes frescos y de calidad, fusionando tradición y modernidad.
+      </p>
+    </section>
+
+    <section id="menu">
+      <h2>Menú</h2>
+      <div class="filtros">
+        <button class="filtro" data-categoria="todos">Todos</button>
+        <button class="filtro" data-categoria="entradas">Entradas</button>
+        <button class="filtro" data-categoria="principales">Platos Principales</button>
+        <button class="filtro" data-categoria="postres">Postres</button>
+        <button class="filtro" data-categoria="bebidas">Bebidas</button>
+      </div>
+
+      <h3>🥗 Entradas</h3>
+      <div class="menu-grid" data-categoria="entradas">
+        <article class="plato" data-nombre="Bruschetta" data-descripcion="Pan tostado con tomate fresco, ajo, albahaca y aceite de oliva." data-precio="5" data-imagen="img/bruschetta.jpg">
+          <img src="img/bruschetta.jpg" alt="Bruschetta">
+          <h3>Bruschetta</h3>
+          <span class="precio">$5</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Sopa de Tomate" data-descripcion="Cremosa sopa de tomate con especias mediterráneas." data-precio="6" data-imagen="img/sopa.jpg">
+          <img src="img/sopa.jpg" alt="Sopa de tomate">
+          <h3>Sopa de Tomate</h3>
+          <span class="precio">$6</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Ensalada César" data-descripcion="Lechuga fresca, crutones, pollo y aderezo césar." data-precio="7" data-imagen="img/cesar.jpg">
+          <img src="img/cesar.jpg" alt="Ensalada César">
+          <h3>Ensalada César</h3>
+          <span class="precio">$7</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+      </div>
+
+      <h3>🍝 Platos Principales</h3>
+      <div class="menu-grid" data-categoria="principales">
+        <article class="plato" data-nombre="Pizza Margarita" data-descripcion="Masa fina, salsa de tomate casera, mozzarella fresca y albahaca." data-precio="8" data-imagen="img/pizza.jpg">
+          <img src="img/pizza.jpg" alt="Pizza Margarita">
+          <h3>Pizza Margarita</h3>
+          <span class="precio">$8</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Pasta Carbonara" data-descripcion="Pasta al dente con panceta, huevo y queso parmesano." data-precio="12" data-imagen="img/pasta.jpg">
+          <img src="img/pasta.jpg" alt="Pasta Carbonara">
+          <h3>Pasta Carbonara</h3>
+          <span class="precio">$12</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Filete a la Parrilla" data-descripcion="Corte jugoso de res con guarnición de verduras asadas." data-precio="18" data-imagen="img/filete.jpg">
+          <img src="img/filete.jpg" alt="Filete a la Parrilla">
+          <h3>Filete a la Parrilla</h3>
+          <span class="precio">$18</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+      </div>
+
+      <h3>🍰 Postres</h3>
+      <div class="menu-grid" data-categoria="postres">
+        <article class="plato" data-nombre="Tiramisú" data-descripcion="Clásico postre italiano con café, cacao y crema mascarpone." data-precio="6" data-imagen="img/tiramisu.jpg">
+          <img src="img/tiramisu.jpg" alt="Tiramisú">
+          <h3>Tiramisú</h3>
+          <span class="precio">$6</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Cheesecake" data-descripcion="Pastel de queso cremoso con salsa de frutos rojos." data-precio="5" data-imagen="img/cheesecake.jpg">
+          <img src="img/cheesecake.jpg" alt="Cheesecake">
+          <h3>Cheesecake</h3>
+          <span class="precio">$5</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Helado Artesanal" data-descripcion="Tres bolas de helado casero a elegir." data-precio="4" data-imagen="img/helado.jpg">
+          <img src="img/helado.jpg" alt="Helado Artesanal">
+          <h3>Helado Artesanal</h3>
+          <span class="precio">$4</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+      </div>
+
+      <h3>🥤 Bebidas</h3>
+      <div class="menu-grid" data-categoria="bebidas">
+        <article class="plato" data-nombre="Coca-Cola" data-descripcion="Bebida refrescante clásica." data-precio="2" data-imagen="img/coca.jpg">
+          <img src="img/coca.jpg" alt="Coca-Cola">
+          <h3>Coca-Cola</h3>
+          <span class="precio">$2</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Jugo Natural" data-descripcion="Jugo recién exprimido de naranja, piña o mango." data-precio="3" data-imagen="img/jugo.jpg">
+          <img src="img/jugo.jpg" alt="Jugo Natural">
+          <h3>Jugo Natural</h3>
+          <span class="precio">$3</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+        <article class="plato" data-nombre="Copa de Vino" data-descripcion="Selección especial de vino tinto o blanco." data-precio="6" data-imagen="img/vino.jpg">
+          <img src="img/vino.jpg" alt="Copa de Vino">
+          <h3>Copa de Vino</h3>
+          <span class="precio">$6</span>
+          <button class="ver-mas">Ver más</button>
+        </article>
+      </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <img id="modal-imagen" src="" alt="Plato">
+        <h3 id="modal-nombre"></h3>
+        <p id="modal-descripcion"></p>
+        <span id="modal-precio"></span>
+        <br>
+        <button id="agregar-carrito">Añadir al carrito</button>
+      </div>
+    </div>
+
+    <div id="modal-carrito" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <h3>🛒 Tu carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <p id="total-carrito">Total: $0</p>
+        <button id="checkout">Finalizar compra</button>
+      </div>
+    </div>
+
+    <div id="modal-checkout" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <h3>💳 Finalizar compra</h3>
+        <form id="form-checkout">
+          <label for="checkout-nombre">Nombre completo:</label>
+          <input type="text" id="checkout-nombre" required>
+          <label for="checkout-direccion">Dirección:</label>
+          <input type="text" id="checkout-direccion" required>
+          <label for="checkout-tarjeta">Número de tarjeta:</label>
+          <input type="text" id="checkout-tarjeta" maxlength="16" required>
+          <button type="submit">Confirmar pedido</button>
+        </form>
+        <p id="mensaje-checkout"></p>
+      </div>
+    </div>
+
+    <section id="reservas">
+      <h2>Reservar mesa</h2>
+      <form id="form-reserva">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="personas">Número de personas:</label>
+        <input type="number" id="personas" min="1" max="20" required>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" required>
+        <button type="submit">Reservar</button>
+      </form>
+      <p id="mensaje-reserva"></p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>📍 Dirección: Calle Sabrosa 123, Ciudad</p>
+      <p>📞 Teléfono: +34 123 456 789</p>
+      <p>📧 Email: contacto@restaurantedelicioso.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Restaurante Delicioso. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdfdfd;
+    color: #333;
+  }
+  
+  header {
+    background: #8b0000;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative; 
+  }
+  
+  .carrito-icono {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: #fff;
+    color: #8b0000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  header h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    color: #8b0000;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .plato {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .plato:hover {
+    transform: scale(1.05);
+  }
+  
+  .plato img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .precio {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #8b0000;
+    font-size: 1.1rem;
+  }
+  
+  .ver-mas {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .ver-mas:hover {
+    background: #a52a2a;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-contenido {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-contenido img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-contenido h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-contenido p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #modal-precio {
+    font-weight: bold;
+    color: #8b0000;
+    font-size: 1.2rem;
+  }
+  
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 400px;
+  }
+  
+  input, button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background: #8b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  form button:hover {
+    background: #a52a2a;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .filtros {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filtros .filtro {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .filtros .filtro:hover {
+    background: #a52a2a;
+  }
+  
+  .filtros .filtro.activo {
+    background: #333;
+  }
+  
+
+  #reservas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80%; 
+    background: #f8f8f8;
+    padding: 2rem;
+    border-top: 3px solid #8b0000;
+  }
+  
+  #reservas h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 800px; /* antes era 400px → ahora más ancho */
+    width: 100%;
+  }
+  
+  #form-reserva {
+    width: 100%;
+    max-width: 1200px; /* ahora ocupa más espacio horizontal */
+    background: #fff;
+    padding: 2.5rem; /* más relleno interno */
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  }
+  
+  #form-reserva input, 
+  #form-reserva button {
+    width: 100%;
+  }
+  
